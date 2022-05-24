@@ -41,8 +41,8 @@ namespace DelegateEvent
             try
             {
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("ganiev.a60@mail.ru"); // Адрес отправителя
-                mail.To.Add(new MailAddress("guzel95@list.ru")); // Адрес получателя
+                mail.From = new MailAddress("123@mail.ru"); // Адрес отправителя
+                mail.To.Add(new MailAddress("234@mail.ru")); // Адрес получателя
                 mail.Subject = "Test";
                 mail.Body = " test ";
 
@@ -50,7 +50,7 @@ namespace DelegateEvent
                 client.Host = "smtp.mail.ru";
                 client.Port = 587; 
                 client.EnableSsl = true;
-                client.Credentials = new NetworkCredential("ganiev.a60@mail.ru", "12111960p"); // логин и пароль
+                client.Credentials = new NetworkCredential("123@mail.ru", "password"); // логин и пароль
                 client.Send(mail);
                 Console.WriteLine($"Mail was sent to {mail.To}");
             }
